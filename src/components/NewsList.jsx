@@ -3,10 +3,13 @@ import styles from './NewsList.module.css';
 
 const NewsList = (props) => {
   return (
-    <div className={styles.block}>
+    
+    <div className={styles.block} >
       {
         props.articles.map((article) => {
-          return <NewsItem article={article} />
+          return( 
+          <NewsItem key={article.url} article={article} />
+        )
         })
       }
     </div>
